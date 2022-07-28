@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import os
 name = 'Heloel'
 length =int(len(name))-2
@@ -11,3 +12,6 @@ while name != asterix:
 		asterix = asterix[:index] + a + asterix[index + 1:]
 print(asterix)
 	
+=======
+#this is a python project
+>>>>>>> e85221269015fbfd6ec41c2d54463693098adc28
