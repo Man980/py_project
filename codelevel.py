@@ -23,16 +23,21 @@ else:
 	print('NOK')
 
 '''
-'''
+
+
+#This function capitalizes the first letter of each word. It just takes a name as parameter
 #Exercice 3
 
-name = input("Enter your name:\n>>> ")
-
-new_name = ''
-for x in name.lower().split():
-	new_name+=x.capitalize()+' '
-print(new_name)
 '''
+def camelcase(name):
+	new_name = ''
+	for x in name.lower().split():
+		new_name+=x.capitalize()+' '
+	print(new_name)
+'''
+'''
+
+# Read carrefully the output bellow and comme back to read from the top and you will understand what it is meant for.
 
 #Exercice 4
 a = 2
@@ -84,3 +89,28 @@ print(f'Numbers multiple of a not b are: {b} ==>', len(lis0))
 print(f'Numbers multiple of b not a are: {c} ==>', len(lis1))
 print(f'Numbers multiple of a and b are: {d} ==>', len(lis2))
 print(f'Numbers that are neither multiple of a nor b are: {e} ==>', len(lis3))
+'''
+
+#Exercice 6
+
+# this function allows you to reverse all carateres in a string (Slicing)
+'''
+def string_reverse(string):
+	print(string[::-1])
+
+string_reverse('Hello')
+'''
+
+string = "I am Ralph many"
+
+position = [pos for pos, char in enumerate(string) if char=='a' or char=='e' or char== 'i' or char=='o' or char=='u' or char== 'y' ]
+
+stringss =''
+lis=[]
+
+for x in position:
+	print(x)
+	lis.append(string.replace(string[x], "*"))
+	
+
+print(set(lis))
