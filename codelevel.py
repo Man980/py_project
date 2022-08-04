@@ -100,17 +100,23 @@ def string_reverse(string):
 
 string_reverse('Hello')
 '''
+'''
+#Exercice 8
+def remove_space(string):
+	newstr = string.replace(' ','')
+	return newstr
 
-string = "I am Ralph many"
+print(remove_space('je le suis bien'))
+'''
+#Exercie 9
 
-position = [pos for pos, char in enumerate(string) if char=='a' or char=='e' or char== 'i' or char=='o' or char=='u' or char== 'y' ]
-
-stringss =''
-lis=[]
-
-for x in position:
-	print(x)
-	lis.append(string.replace(string[x], "*"))
-	
-
-print(set(lis))
+'''
+# print all even numbers 
+int_list = [1, 3, 4, 6, 8]
+for x in int_list:
+	if x %2==0:
+		print(x)
+'''
+#Exercice 9
+import localstorage
+varx = localStorage.getItem("mytime");
