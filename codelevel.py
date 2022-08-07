@@ -122,7 +122,7 @@ for chars in str_spl:
 		if i in vowels:
 			chars = chars.replace(chars[chars.index(i)-1], '*')
 	lis.append(chars)
-print(" ".join(lis))
+#print(" ".join(lis))
 			
 
 '''
@@ -145,7 +145,7 @@ for x in int_list:
 string = "web-insecure;34829sjdfnsj32984madsdkj"
 string_new = string.split(';')
 string_new.remove(string_new[0])
-print("".join(string_new))
+#print("".join(string_new))
 
 '''
 #Exercice 11
@@ -207,7 +207,7 @@ def in_out(a, b):
 	elif a == 1 and b ==1:
 		print(a/(a+b))
 
-in_out(3, 24)
+#in_out(3, 24)
 
 #Exercie 15
 
@@ -218,6 +218,33 @@ position1 = x.index('hidden')
 position2 = x.index('endpass')
 
 chars = x[position1+1:position2]
-print(" ".join(chars))
+#print(" ".join(chars))
 
+#Exercice 16
+import string
+str_asccii = string.ascii_letters
+
+split_string = "14P >1A <1V <1H >4O".split()
+lis=[]
+
+for elem in split_string:
+	if elem[0] ==">":
+		# recover the letter's position in ascii_letters 
+		# and we add the letter's position +the the amount of steps to make
+		#which is in elem
+		position = str_asccii.index(elem[-1]) + int(elem[1:-1])
+
+		element = str_asccii[position] # recover the letter hidden (grace to its position related to ascii letter + the amount of steps to make) 
+
+		lis.append(element) #Add letters in list
+
+
+	if elem[0] =="<":
+
+		position = str_asccii.index(elem[-1]) - int(elem[1:-1])
+		element = str_asccii[position]
+
+		lis.append(element)
+
+print(" ".join(lis))
 
