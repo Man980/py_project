@@ -79,7 +79,28 @@ print(f'Numbers multiple of b not a are: {c} ==>', len(lis1))
 print(f'Numbers multiple of a and b are: {d} ==>', len(lis2))
 print(f'Numbers that are neither multiple of a nor b are: {e} ==>', len(lis3))
 '''
+#Exercice 5
+'''
+# it is given to me to add each number in that string by its self then to computer the product of list elements 
 
+string = "5 45 123 12"
+str_spl = string.split()
+
+result_list=[]
+for elements in str_spl:
+	result =0 # after each iteration the loop is initialized to zero (0)
+	for digit in elements:
+		result+=int(digit)
+	result_list.append(result)
+
+print(result_list)
+
+# Compute of the product
+n=1
+for x in result_list:
+	n *=int(x)
+print(n)
+'''
 #Exercice 6
 
 # this function allows you to reverse all carateres in a string (Slicing)
@@ -88,6 +109,22 @@ def string_reverse(string):
 	print(string[::-1])
 string_reverse('Hello')
 '''
+
+#Exercie 7
+
+string = 'je suis un haiti'
+str_spl = string.split()
+vowels =['a', 'e', 'i', 'o', 'u','y']
+lis =[]
+
+for chars in str_spl:
+	for i in chars:
+		if i in vowels:
+			chars = chars.replace(chars[chars.index(i)-1], '*')
+	lis.append(chars)
+print(" ".join(lis))
+			
+
 '''
 #Exercice 8
 def remove_space(string):
@@ -104,6 +141,12 @@ for x in int_list:
 	if x %2==0:
 		print(x)
 '''
+#Exercice 10
+string = "web-insecure;34829sjdfnsj32984madsdkj"
+string_new = string.split(';')
+string_new.remove(string_new[0])
+print("".join(string_new))
+
 '''
 #Exercice 11
 # That's a method used to display the largest and the smallest number
@@ -112,24 +155,69 @@ new_list = sorted(int_list)
 print(new_list[0], new_list[len(int_list)-1])
 '''
 
-# it is given to me to add each number in that string by its self then to computer the product of list elements 
 
-string = "5 45 123 12"
-str_spl = string.split()
 
-result_list=[]
-for elements in str_spl:
-	result =0 # after each iteration the loop is initialize to zero
-	for digit in elements:
-		result+=int(digit)
-	result_list.append(result)
+#Exercice 12
 
-print(result_list)
+#You have these input and output, give the combinations:
 
-# Compute of the product
-n=1
-for x in result_list:
-	n *=int(x)
-print(n)
-		
+#a = 5                 2
+#b = 2         
+
+#a = 3                 3
+#b = 4
+
+#a = 1                 1
+#b = 1
+'''		
+def in_out(a, b):
+	if a== 5 and b ==2:
+		print(int(a//b))
+
+	elif a == 3 and b==4:
+		print(int(a*b/b))
+
+	elif a == 1 and b ==1:
+		print(int(a/b))
+
+in_out(5, 2)
+'''
+#Exercice 13
+
+#Exercice 14
+
+#You have these input and output, give the combinations:
+
+#a = 2                 4
+#b = 16         
+
+#a = 3                 4
+#b = 24
+
+#a = 1                 0.5
+#b = 1
+
+def in_out(a, b):
+	if a== 2 and b ==16:
+		print(int(b/(a*a)))
+
+	elif a == 3 and b==24:
+		print(int(b/(a*2)))
+
+	elif a == 1 and b ==1:
+		print(a/(a+b))
+
+in_out(3, 24)
+
+#Exercie 15
+
+#you have a string between two words "hidden" and "endpass", print out this string
+text1 = " I'm hidden patagtou teolito endpass you hear me"
+x = text1.split()
+position1 = x.index('hidden')
+position2 = x.index('endpass')
+
+chars = x[position1+1:position2]
+print(" ".join(chars))
+
 
