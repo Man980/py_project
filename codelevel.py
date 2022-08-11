@@ -222,9 +222,38 @@ chars = x[position1+1:position2]
 
 #Exercice 16
 import string
+#Men kèk done (INPUT) ak repons yo (OUTPUT):
 str_asccii = string.ascii_letters
 
-split_string = "14P >1A <1V <1H >4O".split()
+    #ap bay "PYTHON"
+    #"14P <1V <1H >4O" 
+    #ap bay "BUGS"
+charact = ">5K <0Y <3W <3K <6U <3Q"
+spl_charact = charact.split()
+'''
+str_digit=0
+lis=[]
+for elem in spl_charact:
+	element =''
+	for char in elem:
+		if char in str_asccii:
+			posi = str_asccii.index(char)
+			print(posi)
+
+	for el in elem:
+		if el.isdigit():
+			str_digit +=int(el)
+		#element = str_asccii[posi-str_digit]
+	
+	if ">" in elem:
+		element = str_asccii[posi+int(str_digit)]
+		lis.append(element)
+	if "<" in elem:
+		elemen = str_asccii[posi-int(str_digit)]
+		lis.append(elemen)
+	'''
+
+split_string = ">3A >0A <1U <10K >1A <9J <0S <16U".split()
 lis=[]
 
 for elem in split_string:
@@ -237,8 +266,6 @@ for elem in split_string:
 		element = str_asccii[position] # recover the letter hidden (grace to its position related to ascii letter + the amount of steps to make) 
 
 		lis.append(element) #Add letters in list
-
-
 	if elem[0] =="<":
 
 		position = str_asccii.index(elem[-1]) - int(elem[1:-1])
@@ -248,3 +275,9 @@ for elem in split_string:
 
 print(" ".join(lis))
 
+# display duplicate numbers just for fun
+def duplicateNumbers(nums):
+	nums.sort()
+	for i in range(1, len(nums)):
+		if nums[i]==nums[i-1]:
+			return nums[i]
