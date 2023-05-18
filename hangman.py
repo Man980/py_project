@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 # this program is a game 
 # it is so simple. Here is how it works:
-# The computer will choose a random word from a list and you(user) will try to guess that word
+# The computer will choose a random WORD from a list and you(user) will try to guess that word
 # To guess the word chosen, you have multiple asterix equal to the amount of letters displayed on the screeen
 #You job is to type letter by letter the word you are trying to guess
 #Note that program needs to improve so your contributions are welcome.
